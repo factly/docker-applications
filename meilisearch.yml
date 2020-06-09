@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+    meilisearch:
+        # Change the version of Meilisearch to a specific version: https://hub.docker.com/r/getmeili/meilisearch/tags
+        image: getmeili/meilisearch
+        ports:
+            - "7700:7700"
+        # Replace <application-name> with the application you would be using the database for
+        volumes:
+            # - ~/volumes/<application-name>/data.ms/:/data.ms
+            - ~/volumes/meili-test/data.ms/:/data.ms

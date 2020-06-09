@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+    mongodb:
+        # Change the version of MongoDB to a specific version: https://hub.docker.com/_/mongo?tab=tags
+        image: mongo:4.4.0-rc7
+        ports:
+            - "27017:27017"
+        # Replace <application-name> with the application you would be using the database for
+        volumes:
+            # - ~/volumes/<application-name>/mongodb/:/data/db/
+            - ~/volumes/test/mongodb/:/data/db/

@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+
+  postgres:
+    image: postgres:13
+    ports:
+      - "5432:5432" 
+    # Replace <application-name> with the application you would be using the database for
+    volumes:
+      - ~/volumes/<application-name>/postgresql:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
